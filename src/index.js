@@ -4,11 +4,11 @@ import config from './common/config/index'
 
 const app = require('http').createServer(express)
 
-app.listen(8081, (err) => {
+app.listen(config.PORT, (err) => {
   if (err) {
     console.log(err)
     process.exit()
   }
-  console.log(`${description} version ${version} Ready on port ${8081}`)
+  console.log(`${description} version ${version} Ready on port ${config.PORT}`)
 })
 export default app
